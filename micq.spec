@@ -1,4 +1,4 @@
-# $Revision: 1.1 $
+# $Revision: 1.2 $
 Summary:	micq - ICQ Text Based Client
 Name:		micq
 Version:	0.4.2
@@ -6,12 +6,12 @@ Release:	1
 Copyright:	GPL
 Group:		Applications/Communication
 Group(pl):	Aplikacje/Komunikacja
-Source:		%{name}-%{version}.tgz
+Source:		ftp://micq.chatzone.org/pub/micq/V%{version}/%{name}-%{version}.tgz
 Patch0:		%{name}-make.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
-Text Based ICQ Client
+Text Based ICQ Client.
 
 %prep
 %setup -q
