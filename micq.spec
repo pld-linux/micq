@@ -8,6 +8,8 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 Url:		http://www.micq.org/
+BuildRequires:  autoconf
+BuildRequires:  automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
