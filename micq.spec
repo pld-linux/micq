@@ -2,7 +2,7 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
-Version:	0.4.9
+Version:	0.4.9.2b
 Release:	1
 License:	GPL
 Group:		Applications/Communications
@@ -26,24 +26,27 @@ Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
 %setup -q
 
 %build
+%{__aclocal}
+%{__automake}
+%{__autoconf}
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-install -D doc/micq.1 $RPM_BUILD_ROOT/%{_mandir}/man1/micq.1
-install -D doc/micq.7 $RPM_BUILD_ROOT/%{_mandir}/man7/micq.7
-install -D doc/micqrc.5 $RPM_BUILD_ROOT/%{_mandir}/man5/micqrc.5
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS
+%doc README NEWS TODO ChangeLog doc/README.SOCKS5 doc/icq*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
+%lang(de) %{_mandir}/de/man?/*
+%lang(ru) %{_mandir}/ru/man?/*
+
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(pt_BR) %{_datadir}/micq/br.i18n
 %lang(zh) %{_datadir}/micq/cn.i18n
