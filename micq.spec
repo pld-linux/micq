@@ -84,4 +84,4 @@ rm -rf $RPM_BUILD_ROOT
 %lang(ru) %{_datadir}/micq/ru.i18n
 %lang(sv) %{_datadir}/micq/se.i18n
 %lang(uk) %{_datadir}/micq/uk.i18n
-%lang(sr,sh) %{_datadir}/micq/yu.i18n
+%lang(sr) %{_datadir}/micq/yu.i18n
