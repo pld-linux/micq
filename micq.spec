@@ -1,18 +1,26 @@
 Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
+Summary(ru):	micq - текстовый клиент icq
 Name:		micq
 Version:	0.4.9
 Release:	1
-License:	BSD
+License:	GPL
 Group:		Applications/Communications
-Source0:	http://micq.ukeer.de/source/%{name}-%{version}.tgz
+Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
+Url:		http://www.micq.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Text Based ICQ Client.
+Micq is an ICQ client for text mode unix that is not in any way supported
+by Mirabilis.  This was done for two reasons :  author wanted to see if he
+could and Mirabilis has been slow ( at best ) in releasing a unix port.
 
 %description -l pl
 Tekstowy klient ICQ.
+
+%description -l ru
+Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
+поддерживаемый компанией Mirabilis.
 
 %prep
 %setup -q
