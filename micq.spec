@@ -2,13 +2,13 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
-Version:	0.4.10.4
-Release:	0.1
+Version:	0.4.11
+Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
-# Source0-md5:	abbcf17d1feaf61a8e453d180d559e3c
-Patch0:		%{name}-nolibgnutls.patch
+# Source0-md5:	0b65627e488dd24803e16f060c880734
+#Patch0:		%{name}-nolibgnutls.patch
 URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,7 +30,7 @@ Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
 
 %prep
 %setup -q
-%patch0 -p0
+#%patch0 -p0
 
 %build
 rm -f missing
@@ -90,6 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_datadir}/micq/pl.i18n
 %lang(pt) %{_datadir}/micq/pt.i18n
 %lang(ru) %{_datadir}/micq/ru.i18n
+%lang(ru) %{_datadir}/micq/ru@fun.i18n
 %lang(sv) %{_datadir}/micq/se.i18n
 %lang(uk) %{_datadir}/micq/uk.i18n
 %lang(sr) %{_datadir}/micq/yu.i18n
