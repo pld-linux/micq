@@ -58,7 +58,7 @@ diff -Nur micq-0.4.2-orig/file_util.c micq-0.4.2/file_util.c
 +      if ( path[ strlen( path ) - 1 ] != '/' ) 
 +         strcat( path, "/" );
 +      strcat( path, "etc" );
-+      if ( mkdir(path, S_IRWXU|S_IRGRP|S_IXGRP|S_IROTH|S_IXOTH) == -1 ) {
++      if ( mkdir(path, 0700) == -1 ) {
 +         perror( "Error creating ~/etc directory" );
 +         exit (1 );
 +      }
