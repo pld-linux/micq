@@ -1,15 +1,13 @@
-%define		_patchlevel	4
 Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Name:		micq
-Version:	0.4.6
-Release:	3
+Version:	0.4.7
+Release:	1
 License:	BSD
 Group:		Applications/Communications
 Group(de):	Applikationen/Kommunikation
 Group(pl):	Aplikacje/Komunikacja
-Source0:	http://micq.ukeer.de/source/%{name}-%{version}-p%{_patchlevel}.tgz
-Patch0:		%{name}-DESTDIR.patch
+Source0:	 http://micq.ukeer.de/source/%{name}-%{version}.tgz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -19,18 +17,20 @@ Text Based ICQ Client.
 Tekstowy klient ICQ.
 
 %prep
-%setup -q -n %{name}-%{version}-p%{_patchlevel}
-%patch0 -p1
+%setup -q
 
 %build
-%{__make} CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS} -DUNIX"
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+install -D doc/micq.1 $RPM_BUILD_ROOT/%{_mandir}/man1/micq.1
+install -D doc/micq.7 $RPM_BUILD_ROOT/%{_mandir}/man7/micq.7
+install -D doc/micqrc.5 $RPM_BUILD_ROOT/%{_mandir}/man5/micqrc.5
 
-gzip -9nf README CHANGELOG
+gzip -9nf README NEWS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
