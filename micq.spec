@@ -1,4 +1,4 @@
-# $Revision: 1.8 $
+# $Revision: 1.9 $
 Summary:	micq - ICQ Text Based Client
 Name:		micq
 Version:	0.4.2
@@ -11,7 +11,7 @@ Patch0:		%{name}-make.patch
 Patch1:		%{name}-about_cmd.patch
 Patch2:		%{name}-home_etc.patch
 Patch3:		%{name}-home_data.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Text Based ICQ Client.
