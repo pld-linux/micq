@@ -5,7 +5,7 @@ Version:	0.4.7
 Release:	1
 License:	BSD
 Group:		Applications/Communications
-Source0:	 http://micq.ukeer.de/source/%{name}-%{version}.tgz
+Source0:	http://micq.ukeer.de/source/%{name}-%{version}.tgz
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
