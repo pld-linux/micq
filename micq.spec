@@ -2,7 +2,7 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Name:		micq
 Version:	0.4.7
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Communications
 Source0:	http://micq.ukeer.de/source/%{name}-%{version}.tgz
@@ -39,10 +39,10 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 %lang(bg) %{_datadir}/micq/bg.i18n
-%lang(br) %{_datadir}/micq/br.i18n
-%lang(cn) %{_datadir}/micq/cn.i18n
+%lang(pt_BR) %{_datadir}/micq/br.i18n
+%lang(zh) %{_datadir}/micq/cn.i18n
 %lang(de) %{_datadir}/micq/de.i18n
-%lang(en) %{_datadir}/micq/en.i18n
+%{_datadir}/micq/en.i18n
 %lang(es) %{_datadir}/micq/es.i18n
 %lang(fi) %{_datadir}/micq/fi.i18n
 %lang(fr) %{_datadir}/micq/fr.i18n
@@ -52,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(nl) %{_datadir}/micq/nl.i18n
 %lang(pl) %{_datadir}/micq/pl.i18n
 %lang(ru) %{_datadir}/micq/ru.i18n
-%lang(se) %{_datadir}/micq/se.i18n
+%lang(sv) %{_datadir}/micq/se.i18n
 %lang(uk) %{_datadir}/micq/uk.i18n
-%lang(yu) %{_datadir}/micq/yu.i18n
+%lang(sr,sh) %{_datadir}/micq/yu.i18n
