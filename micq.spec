@@ -2,7 +2,7 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
-Version:	0.4.9.4
+Version:	0.4.10.1
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS TODO ChangeLog doc/README.SOCKS5 doc/icq*
+%doc README NEWS TODO ChangeLog doc/icq*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 %lang(de) %{_mandir}/de/man?/*
@@ -59,7 +59,16 @@ rm -rf $RPM_BUILD_ROOT
 %lang(zh) %{_datadir}/micq/zh_CN.i18n
 %lang(de) %{_datadir}/micq/de.i18n
 %{_datadir}/micq/en.i18n
-%{_datadir}/micq/en_fun.i18n
+%{_datadir}/micq/en@fun.i18n
+%{_datadir}/micq/C.i18n
+%lang(de) %{_datadir}/micq/de.i18n
+%lang(de) %{_datadir}/micq/de@fun.i18n
+%lang(de) %{_datadir}/micq/de_CH.i18n
+%lang(ja) %{_datadir}/micq/ja.i18n
+%lang(ja) %{_datadir}/micq/ja.UTF-8.i18n
+%lang(ro) %{_datadir}/micq/ro.i18n
+%lang(sr) %{_datadir}/micq/sr.UTF-8.i18n
+%lang(sr) %{_datadir}/micq/sr.i18n
 %lang(es) %{_datadir}/micq/es.i18n
 %lang(fi) %{_datadir}/micq/fi.i18n
 %lang(fr) %{_datadir}/micq/fr.i18n
