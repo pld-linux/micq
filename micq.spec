@@ -57,6 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(de) %{_mandir}/de/man?/*
 %lang(es) %{_mandir}/es/man?/*
 %lang(fr) %{_mandir}/fr/man?/*
+%lang(it) %{_mandir}/it/man?/*
 %lang(ru) %{_mandir}/ru_RU.KOI8-R/man?/*
 %lang(sr) %{_mandir}/sr_YU@cyrillic/man?/*
 %lang(uk) %{_mandir}/uk_UA/man?/*
