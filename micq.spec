@@ -8,8 +8,8 @@ License:	GPL
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 Url:		http://www.micq.org/
-BuildRequires:  autoconf
-BuildRequires:  automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -28,6 +28,7 @@ Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
 %setup -q
 
 %build
+rm -f missing
 %{__aclocal}
 %{__automake}
 %{__autoconf}
@@ -36,6 +37,7 @@ Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
