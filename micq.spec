@@ -1,4 +1,4 @@
-# $Revision: 1.15 $
+# $Revision: 1.16 $
 Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Name:		micq
@@ -6,6 +6,7 @@ Version:	0.4.6
 Release:	1
 License:	GPL
 Group:		Applications/Communications
+Group(de):	Applikationen/Kommunikation
 Group(pl):	Aplikacje/Komunikacja
 Source0:	ftp://micq.chatzone.org/pub/micq/V%{version}/%{name}-%{version}.tgz
 Patch0:		%{name}-make.patch
@@ -32,15 +33,16 @@ Tekstowy klient ICQ.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install -s micq $RPM_BUILD_ROOT%{_bindir}
+install micq $RPM_BUILD_ROOT%{_bindir}
+
+gzip -9nf README CHANGELOG
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README CHANGELOG
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
