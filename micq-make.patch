@@ -1,12 +1,12 @@
-diff -urN micq-0.4.6.org/Makefile micq-0.4.6/Makefile
---- micq-0.4.6.org/Makefile	Wed Oct 25 23:04:27 2000
-+++ micq-0.4.6/Makefile	Wed Oct 25 23:05:25 2000
-@@ -6,7 +6,7 @@
- # edit that file to set up options.
- #
+diff -ur micq-0.4.6-p1.orig/src/Makefile micq-0.4.6-p1/src/Makefile
+--- micq-0.4.6-p1.orig/src/Makefile	Tue Jan 23 17:49:05 2001
++++ micq-0.4.6-p1/src/Makefile	Fri Feb 23 17:27:23 2001
+@@ -3,7 +3,7 @@
+ # rewritten by  Rico Gloeckner <mc@verdinet.de>
+ 
  CC = gcc
 -CFLAGS = -O4 -Wall -DUNIX 
 +CFLAGS = $(RPM_OPT_FLAGS) -Wall -DUNIX 
- CFLAGS += -DENGLISH_LANG
- #CFLAGS += -DBULGARIAN_LANG
- #CFLAGS += -DPOLISH_LANG
+ 
+ # uncomment the line below for debuging info
+ #CFLAGS += -g
