@@ -4,7 +4,7 @@ Summary(ru):	micq - текстовый клиент icq
 Name:		micq
 Version:	0.4.9.2b
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 Url:		http://www.micq.org/
