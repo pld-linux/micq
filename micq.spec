@@ -57,7 +57,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(pt_BR) %{_datadir}/micq/br.i18n
 %lang(zh) %{_datadir}/micq/zh_CN.i18n
-%lang(de) %{_datadir}/micq/de.i18n
 %{_datadir}/micq/en.i18n
 %{_datadir}/micq/en@fun.i18n
 %{_datadir}/micq/C.i18n
