@@ -7,6 +7,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
+# Source0-md5:	a5bf29dde10474a10a5a4c3e43bf6915
 Url:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
