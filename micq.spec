@@ -36,7 +36,8 @@ rm -f missing
 %{__aclocal}
 %{__automake}
 %{__autoconf}
-%configure
+%configure \
+	--disable-tcl
 %{__make}
 
 %install
