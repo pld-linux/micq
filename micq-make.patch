@@ -1,0 +1,12 @@
+diff -Nur micq-0.4.2.orig/Makefile micq-0.4.2/Makefile
+--- micq-0.4.2.orig/Makefile	Mon Sep 13 03:42:33 1999
++++ micq-0.4.2/Makefile	Thu Sep 30 09:25:44 1999
+@@ -2,7 +2,7 @@
+ # I have no clue but this appears to work fairly well
+ # be sure to use gmake
+ CC = gcc
+-CFLAGS = -O4 -Wall -DUNIX -DANSI_COLOR 
++CFLAGS = $(RPM_OPT_FLAGS) -DUNIX -DANSI_COLOR 
+ CFLAGS += -DMAX_CONTACTS=255
+ CFLAGS += -DUSE_MREADLINE
+ #CFLAGS += -DCOLOR_SCHEME_A
