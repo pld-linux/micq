@@ -1,8 +1,9 @@
-# $Revision: 1.14 $
-Summary:	micq - ICQ Text Based Client
+# $Revision: 1.15 $
+Summary:	ICQ Text Based Client
+Summary(pl):	Tekstowy klient ICQ
 Name:		micq
-Version:	0.4.2
-Release:	2
+Version:	0.4.6
+Release:	1
 License:	GPL
 Group:		Applications/Communications
 Group(pl):	Aplikacje/Komunikacja
@@ -16,12 +17,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Text Based ICQ Client.
 
+%description -l pl
+Tekstowy klient ICQ.
+
 %prep
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
+#%patch2 -p1
+#%patch3 -p1
 
 %build
 %{__make}
@@ -33,12 +37,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install -s micq $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf {CHANGELOG,README}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,CHANGELOG}.gz
+%doc README CHANGELOG
 %attr(755,root,root) %{_bindir}/*
