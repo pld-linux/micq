@@ -1,0 +1,40 @@
+diff -ur micq-0.4.6-p4.orig/Makefile micq-0.4.6-p4/Makefile
+--- micq-0.4.6-p4.orig/Makefile	Thu Apr 19 00:38:53 2001
++++ micq-0.4.6-p4/Makefile	Mon Jun 11 22:55:41 2001
+@@ -13,7 +13,7 @@
+ 	@for i in $(DIR); do \
+ 	cd $$i && make install && cd .. ; \
+ 	done
+-	install -g root -o root -m 755 micq.1 /usr/local/man/man1
++	install micq.1 $(DESTDIR)/usr/share/man/man1
+ 
+ clean:
+ 	@for i in $(DIR); do \
+diff -ur micq-0.4.6-p4.orig/lang/Makefile micq-0.4.6-p4/lang/Makefile
+--- micq-0.4.6-p4.orig/lang/Makefile	Wed Apr 18 13:48:16 2001
++++ micq-0.4.6-p4/lang/Makefile	Mon Jun 11 22:55:20 2001
+@@ -9,10 +9,5 @@
+ 	
+ 
+ install:
+-	@if [ $$UID = 0 ]; then \
+-	 mkdir /usr/local/share/micq ; \
+-	 cp *.i18n /usr/local/share/micq ;\
+-	else \
+-	 mkdir ${HOME}/.micq/ ; \
+-	 cp *.i18n ${HOME}/.micq/ ; \
+-	fi
++	mkdir $(DESTDIR)/usr/share/micq ; \
++	cp *.i18n $(DESTDIR)/usr/share/micq ;\
+diff -ur micq-0.4.6-p4.orig/src/Makefile micq-0.4.6-p4/src/Makefile
+--- micq-0.4.6-p4.orig/src/Makefile	Thu Apr 19 00:38:53 2001
++++ micq-0.4.6-p4/src/Makefile	Mon Jun 11 22:55:11 2001
+@@ -46,7 +46,7 @@
+ 	rm -f ${OBJS} micq *~
+ 
+ install:
+-	install -g root -o root -m 755 micq /usr/local/bin
++	install micq $(DESTDIR)/usr/bin
+ 
+ indent:
+ 	@for i in *.c; do \
