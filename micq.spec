@@ -8,7 +8,6 @@ License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 # Source0-md5:	0b65627e488dd24803e16f060c880734
-#Patch0:		%{name}-nolibgnutls.patch
 URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -30,7 +29,7 @@ Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
 
 %prep
 %setup -q
-#%patch0 -p0
+sed -i 's/AM_PATH_LIBGNUTLS/#AM_PATH_LIBGNUTLS/'  configure.ac
 
 %build
 rm -f missing
