@@ -2,12 +2,12 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
-Version:	0.4.11
+Version:	0.4.12
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
-# Source0-md5:	0b65627e488dd24803e16f060c880734
+# Source0-md5:	92474a12ff064a0204c2a6b59169fb66
 URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
