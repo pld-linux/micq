@@ -2,7 +2,7 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
-Version:	0.4.9.3.1
+Version:	0.4.9.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
@@ -52,6 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{_mandir}/es/man?/*
 %lang(fr) %{_mandir}/fr/man?/*
 %lang(ru) %{_mandir}/ru/man?/*
+%lang(pt_BR) %{_mandir}/pt_BR/man?/*
 
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(pt_BR) %{_datadir}/micq/br.i18n
