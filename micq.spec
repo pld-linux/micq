@@ -46,6 +46,11 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# Fix manpages locations
+mv -f $RPM_BUILD_ROOT%{_mandir}/ru_RU.KOI8-R    $RPM_BUILD_ROOT%{_mandir}/ru
+mv -f $RPM_BUILD_ROOT%{_mandir}/sr_YU@cyrillic  $RPM_BUILD_ROOT%{_mandir}/sr
+mv -f $RPM_BUILD_ROOT%{_mandir}/uk_UA           $RPM_BUILD_ROOT%{_mandir}/uk
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -58,9 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 %lang(es) %{_mandir}/es/man?/*
 %lang(fr) %{_mandir}/fr/man?/*
 %lang(it) %{_mandir}/it/man?/*
-%lang(ru) %{_mandir}/ru_RU.KOI8-R/man?/*
-%lang(sr) %{_mandir}/sr_YU@cyrillic/man?/*
-%lang(uk) %{_mandir}/uk_UA/man?/*
+%lang(ru) %{_mandir}/ru/man?/*
+%lang(sr) %{_mandir}/sr/man?/*
+%lang(uk) %{_mandir}/uk/man?/*
 %lang(pt_BR) %{_mandir}/pt_BR/man?/*
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(zh_CN) %{_datadir}/micq/zh_CN.i18n
