@@ -1,4 +1,4 @@
-# $Revision: 1.11 $
+# $Revision: 1.12 $
 Summary:	micq - ICQ Text Based Client
 Name:		micq
 Version:	0.4.2
@@ -24,7 +24,7 @@ Text Based ICQ Client.
 %patch3 -p1
 
 %build
-make
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
