@@ -1,4 +1,4 @@
-# $Revision: 1.7 $
+# $Revision: 1.8 $
 Summary:	micq - ICQ Text Based Client
 Name:		micq
 Version:	0.4.2
