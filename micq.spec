@@ -29,7 +29,7 @@ Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
 
 %build
 rm -f missing
-%configure2_13
+%configure
 %{__make}
 
 %install
