@@ -1,4 +1,3 @@
-# $Revision: 1.16 $
 Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Name:		micq
