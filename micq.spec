@@ -11,6 +11,7 @@ Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README NEWS TODO ChangeLog doc/icq*
+%doc AUTHORS README NEWS TODO ChangeLog doc/icq*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man?/*
 %lang(de) %{_mandir}/de/man?/*
