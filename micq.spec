@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(uk) %{_mandir}/uk/man?/*
 %lang(pt_BR) %{_mandir}/pt_BR/man?/*
 %lang(bg) %{_datadir}/micq/bg.i18n
-%lang(zh) %{_datadir}/micq/zh_CN.i18n
+%lang(zh_CN) %{_datadir}/micq/zh_CN.i18n
 %{_datadir}/micq/en.i18n
 %{_datadir}/micq/en@fun.i18n
 %{_datadir}/micq/C.i18n
