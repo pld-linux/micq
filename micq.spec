@@ -1,9 +1,9 @@
-# $Revision: 1.6 $
+# $Revision: 1.7 $
 Summary:	micq - ICQ Text Based Client
 Name:		micq
 Version:	0.4.2
-Release:	1
-Copyright:	GPL
+Release:	2
+License:	GPL
 Group:		Applications/Communication
 Group(pl):	Aplikacje/Komunikacja
 Source:		ftp://micq.chatzone.org/pub/micq/V%{version}/%{name}-%{version}.tgz
@@ -31,7 +31,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-install micq	$RPM_BUILD_ROOT%{_bindir}
+install -s micq $RPM_BUILD_ROOT%{_bindir}
 
 gzip -9nf {CHANGELOG,README}
 
