@@ -8,7 +8,7 @@ License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 # Source0-md5:	a5bf29dde10474a10a5a4c3e43bf6915
-Url:		http://www.micq.org/
+URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,7 +19,9 @@ by Mirabilis.  This was done for two reasons :  author wanted to see if he
 could and Mirabilis has been slow ( at best ) in releasing a unix port.
 
 %description -l pl
-Tekstowy klient ICQ.
+Micq jest tekstowym klientem ICQ, ktСry nie jest w ©aden sposСb supportowany
+przez Mirabilis. ZostaЁ stworzony z dwСch powodСw: autor chciaЁ zobaczyФ
+czy potrafi oraz Mirabilis powoli wypuszczaЁo port linuksowy.
 
 %description -l ru
 Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
@@ -39,7 +41,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,7 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sr) %{_mandir}/sr/man?/*
 %lang(uk) %{_mandir}/uk/man?/*
 %lang(pt_BR) %{_mandir}/pt_BR/man?/*
-
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(zh) %{_datadir}/micq/zh_CN.i18n
 %{_datadir}/micq/en.i18n
