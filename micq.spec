@@ -1,4 +1,4 @@
-# $Revision: 1.5 $
+# $Revision: 1.6 $
 Summary:	micq - ICQ Text Based Client
 Name:		micq
 Version:	0.4.2
@@ -10,6 +10,7 @@ Source:		ftp://micq.chatzone.org/pub/micq/V%{version}/%{name}-%{version}.tgz
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-about_cmd.patch
 Patch2:		%{name}-home_etc.patch
+Patch3:		%{name}-home_data.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -20,6 +21,7 @@ Text Based ICQ Client.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 make
