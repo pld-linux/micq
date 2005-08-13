@@ -2,15 +2,16 @@ Summary:	ICQ Text Based Client
 Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
-Version:	0.4.12
+Version:	0.5.0.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
-# Source0-md5:	92474a12ff064a0204c2a6b59169fb66
+# Source0-md5:	142f80100955018046745ada09859b2d
 URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:  openssl-devel
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -38,7 +39,8 @@ rm -f missing
 %{__automake}
 %{__autoconf}
 %configure \
-	--disable-tcl
+	--disable-tcl \
+	--enable-ssl=openssl
 %{__make}
 
 %install
@@ -46,11 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# Fix manpages locations
-mv -f $RPM_BUILD_ROOT%{_mandir}/ru_RU.KOI8-R    $RPM_BUILD_ROOT%{_mandir}/ru
-mv -f $RPM_BUILD_ROOT%{_mandir}/sr_YU@cyrillic  $RPM_BUILD_ROOT%{_mandir}/sr
-mv -f $RPM_BUILD_ROOT%{_mandir}/uk_UA           $RPM_BUILD_ROOT%{_mandir}/uk
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -66,20 +63,17 @@ rm -rf $RPM_BUILD_ROOT
 %lang(it) %{_mandir}/it/man?/*
 %lang(ru) %{_mandir}/ru/man?/*
 %lang(sr) %{_mandir}/sr/man?/*
+%lang(sk) %{_mandir}/sk/man?/*
 %lang(uk) %{_mandir}/uk/man?/*
 %lang(pt_BR) %{_mandir}/pt_BR/man?/*
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(zh_CN) %{_datadir}/micq/zh_CN.i18n
 %{_datadir}/micq/en.i18n
-%{_datadir}/micq/en@fun.i18n
 %{_datadir}/micq/C.i18n
 %lang(de) %{_datadir}/micq/de.i18n
-%lang(de) %{_datadir}/micq/de@fun.i18n
 %lang(de) %{_datadir}/micq/de_CH.i18n
 %lang(ja) %{_datadir}/micq/ja.i18n
-%lang(ja) %{_datadir}/micq/ja.UTF-8.i18n
 %lang(ro) %{_datadir}/micq/ro.i18n
-%lang(sr) %{_datadir}/micq/sr.UTF-8.i18n
 %lang(sr) %{_datadir}/micq/sr.i18n
 %lang(es) %{_datadir}/micq/es.i18n
 %lang(fi) %{_datadir}/micq/fi.i18n
@@ -91,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %lang(pl) %{_datadir}/micq/pl.i18n
 %lang(pt) %{_datadir}/micq/pt.i18n
 %lang(ru) %{_datadir}/micq/ru.i18n
-%lang(ru) %{_datadir}/micq/ru@fun.i18n
 %lang(sv) %{_datadir}/micq/se.i18n
+%lang(sv) %{_datadir}/micq/sk.i18n
 %lang(uk) %{_datadir}/micq/uk.i18n
 %lang(sr) %{_datadir}/micq/yu.i18n
