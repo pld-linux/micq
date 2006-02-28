@@ -1,0 +1,6 @@
+- security update to 0.4.10.2
+  BUG(bugtraq):
+  mICQ versions 0.4.9 and earlier allow remote
+  attackers to cause a denial of service (crash)
+  using malformed ICQ message types without a 0xFE
+  separator character.
