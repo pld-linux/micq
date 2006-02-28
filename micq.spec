@@ -3,15 +3,15 @@ Summary(pl):	Tekstowy klient ICQ
 Summary(ru):	micq - текстовый клиент icq
 Name:		micq
 Version:	0.5.0.4
-Release:	1
-License:	GPL v2
+Release:	2
+taicense:	GPL v2
 Group:		Applications/Communications
 Source0:	http://www.micq.org/source/%{name}-%{version}.tgz
 # Source0-md5:	142f80100955018046745ada09859b2d
 URL:		http://www.micq.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:  openssl-devel
+BuildRequires:	openssl-devel
 BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -65,11 +65,12 @@ rm -rf $RPM_BUILD_ROOT
 %lang(sr) %{_mandir}/sr/man?/*
 %lang(sk) %{_mandir}/sk/man?/*
 %lang(uk) %{_mandir}/uk/man?/*
+%dir %{_datadir}/micq
+%{_datadir}/micq/en.i18n
+%{_datadir}/micq/C.i18n
 %lang(pt_BR) %{_mandir}/pt_BR/man?/*
 %lang(bg) %{_datadir}/micq/bg.i18n
 %lang(zh_CN) %{_datadir}/micq/zh_CN.i18n
-%{_datadir}/micq/en.i18n
-%{_datadir}/micq/C.i18n
 %lang(de) %{_datadir}/micq/de.i18n
 %lang(de) %{_datadir}/micq/de_CH.i18n
 %lang(ja) %{_datadir}/micq/ja.i18n
