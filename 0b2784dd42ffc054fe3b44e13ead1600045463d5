@@ -1,0 +1,3 @@
+- updated to 0.4.10.4
+- added nolibgnutls.patch (did I do it correctly?)
+- some %lang mandir updates
