@@ -1,0 +1,2 @@
+- added gzippng %doc,
+- make %{debug} ready and adapterized.
