@@ -1,6 +1,6 @@
 Summary:	ICQ Text Based Client
-Summary(pl):	Tekstowy klient ICQ
-Summary(ru):	micq - текстовый клиент icq
+Summary(pl.UTF-8):   Tekstowy klient ICQ
+Summary(ru.UTF-8):   micq - я┌п╣п╨я│я┌п╬п╡я▀п╧ п╨п╩п╦п╣п╫я┌ icq
 Name:		micq
 Version:	0.5.0.4
 Release:	2
@@ -20,14 +20,14 @@ Micq is an ICQ client for text mode unix that is not in any way supported
 by Mirabilis.  This was done for two reasons :  author wanted to see if he
 could and Mirabilis has been slow ( at best ) in releasing a unix port.
 
-%description -l pl
-Micq jest tekstowym klientem ICQ, ktСry nie jest w ©aden sposСb supportowany
-przez Mirabilis. ZostaЁ stworzony z dwСch powodСw: autor chciaЁ zobaczyФ
-czy potrafi oraz Mirabilis powoli wypuszczaЁo port linuksowy.
+%description -l pl.UTF-8
+Micq jest tekstowym klientem ICQ, ktцЁry nie jest w е╪aden sposцЁb supportowany
+przez Mirabilis. Zostaе┌ stworzony z dwцЁch powodцЁw: autor chciaе┌ zobaczyд┤
+czy potrafi oraz Mirabilis powoli wypuszczaе┌o port linuksowy.
 
-%description -l ru
-Micq - ICQ клиент, работающий в текстовой консоли, никоим образом не
-поддерживаемый компанией Mirabilis.
+%description -l ru.UTF-8
+Micq - ICQ п╨п╩п╦п╣п╫я┌, я─п╟п╠п╬я┌п╟я▌я┴п╦п╧ п╡ я┌п╣п╨я│я┌п╬п╡п╬п╧ п╨п╬п╫я│п╬п╩п╦, п╫п╦п╨п╬п╦п╪ п╬п╠я─п╟п╥п╬п╪ п╫п╣
+п©п╬п╢п╢п╣я─п╤п╦п╡п╟п╣п╪я▀п╧ п╨п╬п╪п©п╟п╫п╦п╣п╧ Mirabilis.
 
 %prep
 %setup -q
