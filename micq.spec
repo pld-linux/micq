@@ -1,6 +1,6 @@
 Summary:	ICQ Text Based Client
-Summary(pl.UTF-8):   Tekstowy klient ICQ
-Summary(ru.UTF-8):   micq - текстовый клиент icq
+Summary(pl.UTF-8):	Tekstowy klient ICQ
+Summary(ru.UTF-8):	micq - текстовый клиент icq
 Name:		micq
 Version:	0.5.0.4
 Release:	2
