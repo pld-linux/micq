@@ -16,9 +16,9 @@ BuildRequires:	sed >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Micq is an ICQ client for text mode unix that is not in any way supported
+Micq is an ICQ client for text mode Unix that is not in any way supported
 by Mirabilis.  This was done for two reasons :  author wanted to see if he
-could and Mirabilis has been slow ( at best ) in releasing a unix port.
+could and Mirabilis has been slow ( at best ) in releasing a Unix port.
 
 %description -l pl.UTF-8
 Micq jest tekstowym klientem ICQ, który nie jest w żaden sposób supportowany
